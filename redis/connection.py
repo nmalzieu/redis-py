@@ -865,6 +865,15 @@ class ConnectionPool(object):
         self.connection_kwargs = connection_kwargs
         self.max_connections = max_connections
 
+        import sys
+        print 4*"\n"
+
+        print "MAX CONNECTIONS = %s" % self.max_connections
+
+        print 4*"\n"
+
+        sys.stdout.flush()
+
         self.reset()
 
     def __repr__(self):
